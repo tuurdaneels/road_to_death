@@ -60,7 +60,7 @@ export default function HomePage() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
+      <div className=" rounded-2xl shadow-xl p-8 max-w-md w-full">
         {/* Logo */}
         <div className="flex justify-center mb-6">
           <img 
@@ -77,33 +77,33 @@ export default function HomePage() {
         {/* Countdown Timer */}
         <div className="mb-8">
           <h2 className="text-xl font-semibold text-center text-gray-700 mb-4">
-            {isExpired ? 'Het is tijd!' : 'Loading edition 3 ☠️🍻'}
+            {isExpired ? 'Het is tijd!' : ''}
           </h2>
           {!isExpired && (
             <div className="grid grid-cols-4 gap-2">
-              <div className="bg-indigo-50 rounded-lg p-3 text-center">
-                <div className="text-2xl font-bold text-indigo-600">
+              <div className=" rounded-lg p-3 text-center">
+                <div className="text-2xl font-bold text-white">
                   {timeLeft.days}
                 </div>
-                <div className="text-xs text-gray-600 mt-1">Dagen</div>
+                <div className="text-xs text-gray-300 mt-1">Dagen</div>
               </div>
-              <div className="bg-indigo-50 rounded-lg p-3 text-center">
-                <div className="text-2xl font-bold text-indigo-600">
+              <div className=" rounded-lg p-3 text-center">
+                <div className="text-2xl font-bold text-white">
                   {timeLeft.hours}
                 </div>
-                <div className="text-xs text-gray-600 mt-1">Uren</div>
+                <div className="text-xs text-gray-300 mt-1">Uren</div>
               </div>
-              <div className="bg-indigo-50 rounded-lg p-3 text-center">
-                <div className="text-2xl font-bold text-indigo-600">
+              <div className=" rounded-lg p-3 text-center">
+                <div className="text-2xl font-bold text-white">
                   {timeLeft.minutes}
                 </div>
-                <div className="text-xs text-gray-600 mt-1">Min</div>
+                <div className="text-xs text-gray-300 mt-1">Min</div>
               </div>
-              <div className="bg-indigo-50 rounded-lg p-3 text-center">
-                <div className="text-2xl font-bold text-indigo-600">
+              <div className=" rounded-lg p-3 text-center">
+                <div className="text-2xl font-bold text-white">
                   {timeLeft.seconds}
                 </div>
-                <div className="text-xs text-gray-600 mt-1">Sec</div>
+                <div className="text-xs text-gray-300 mt-1">Sec</div>
               </div>
             </div>
           )}
@@ -111,7 +111,7 @@ export default function HomePage() {
 
         {isExpired && (
           <>
-            <p className="text-center text-gray-600 mb-8">
+            <p className="text-center text-gray-300 mb-8">
               Kies je team om te beginnen:
             </p>
             <div className="space-y-4">
