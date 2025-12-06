@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logoImage from '../data/images/logo_without_background.png'
+import waitBgImage from '../data/images/wacht bg.png'
 
 export default function HomePage() {
   const [timeLeft, setTimeLeft] = useState({
@@ -48,11 +49,15 @@ export default function HomePage() {
   }, [])
 
   return (
-    <main 
+    <main
       className="min-h-screen flex flex-col items-center justify-center p-4"
       style={{
         paddingTop: 'max(1rem, env(safe-area-inset-top))',
         paddingBottom: 'max(1rem, env(safe-area-inset-bottom))',
+        backgroundImage: `url(${waitBgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
       }}
     >
       <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">

@@ -21,7 +21,7 @@ export const zones: Zone[] = [
       { id: "1-1", name: "Bar Patron", task: "Tequilla Time" },
       { id: "1-2", name: "Den Engel", task: "Pils PP" },
       { id: "1-3", name: "Den Bengel", task: "Sterk Bier" },
-      { id: "1-4", name: "Extra Irish Pub (Viktor)", task: "Split the G" },
+      { id: "1-4", name: "Irish Pub", task: "Split the G" },
     ],
     code: "",
     clue: "Laat een teamfoto maken bij het Brabo beeld"
@@ -35,8 +35,8 @@ export const zones: Zone[] = [
       { id: "2-2", name: "La Parisien", task: "Pils PP" },
       { id: "2-3", name: "Cabron", task: "Pils PP" },
     ],
-    code: "",
-    image: "rebus2.png"
+    code: "Hennything is possible at hennytime with hennyone",
+    image: "rebus2.svg"
   },
   {
     id: 3,
@@ -47,6 +47,7 @@ export const zones: Zone[] = [
       { id: "3-3", name: "Nachtwinkel", task: "Vodka Redbull (blikje)" },
     ],
     code: "",
+    clue: "Doe de extra enveloppe open",
   },
   {
     id: 4,
@@ -70,7 +71,7 @@ export const zones: Zone[] = [
       { id: "5-3", name: "Pallieter", task: "Pils PP" },
       { id: "5-4", name: "Nachtwinkel", task: "Eristoff Mix (blikje)" },
     ],
-    clue: "Tip 1) Botanique Tip 2)🧔🏽‍♂️🏠👩🏼",
+    clue: "Tip 1) 🏨⭐️⭐️⭐️⭐️⭐️ Tip 2)🧔🏽‍♂️🏠👩🏼",
     code: "GASTHUIS S'ELISABETH",
   },
   {

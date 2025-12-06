@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, type ChangeEvent } from 'react'
 import { Zone } from '../data/zones'
 import bgImage from '../data/images/bg.png'
 import cardBgImage from '../data/images/card-bg.png'
 import ossemarktImage from '../data/images/ossemarkt.png'
+import trofbrugImage from '../data/images/rebus2.svg'
 
 // Helper function to get image by name
 function getZoneImage(imageName?: string): string | undefined {
   if (!imageName) return undefined
   const imageMap: Record<string, string> = {
     'ossemarkt.png': ossemarktImage,
+    'rebus2.svg': trofbrugImage,
   }
   return imageMap[imageName]
 }
@@ -138,6 +140,7 @@ export default function ZoneDisplay({
         </div>
         
         <div className="grid grid-cols-2 gap-1 mb-4">
+          
             {zone.cafes.map((cafe) => {
               const isCompleted = localCompleted.has(cafe.id)
               return (
@@ -200,7 +203,7 @@ export default function ZoneDisplay({
               <>
                 {showImage && (
                   <div className="mb-4">
-                    <div className="bg-white rounded-lg p-4 shadow-lg">
+                    <div className="rounded-lg p-4 shadow-lg">
                       {getZoneImage(zone.image) ? (
                         <img
                           src={getZoneImage(zone.image)}
@@ -217,7 +220,7 @@ export default function ZoneDisplay({
                   <div className="mb-4">
                     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-white/20">
                       <h3 className="text-white font-bold mb-3 text-center drop-shadow-md">
-                        Clue
+                        Opdracht
                       </h3>
                       <p className="text-white text-sm leading-relaxed whitespace-pre-line drop-shadow-md">
                         {zone.clue}
@@ -233,7 +236,9 @@ export default function ZoneDisplay({
                     <input
                       type="text"
                       value={enteredCode}
-                      onChange={(e) => setEnteredCode(e.target.value)}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        setEnteredCode(e.target.value)
+                      }
                       placeholder="Code..."
                       className="w-full px-4 py-3 rounded-lg text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-white shadow-lg"
                       autoComplete="off"
