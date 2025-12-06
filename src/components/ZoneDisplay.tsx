@@ -115,16 +115,19 @@ export default function ZoneDisplay({
 
   return (
     <div 
-      className="min-h-screen overflow-y-auto"
+      className="overflow-y-auto"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundColor: '#c49a6c',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        paddingTop: 'max(1rem, env(safe-area-inset-top))',
+        paddingBottom: 'max(1rem, env(safe-area-inset-bottom))',
+        minHeight: '100vh',
       }}
     >
-      <div className="w-full px-3 py-4 mx-auto min-h-screen flex flex-col justify-center" style={{ maxWidth: '500px' }}>
+      <div className="w-full px-3 py-4 mx-auto min-h-screen flex flex-col justify-center" style={{ maxWidth: '500px', paddingTop: 'max(1rem, env(safe-area-inset-top))' }}>
         <div className="mb-4">
           <h1 className="text-2xl font-bold mb-1 text-center text-white drop-shadow-lg">
             Zone {zoneDisplayNumber}: {zone.name}
@@ -282,4 +285,3 @@ export default function ZoneDisplay({
     </div>
   )
 }
-
