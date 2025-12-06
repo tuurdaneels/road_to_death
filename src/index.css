@@ -6,7 +6,12 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
+  height: 100%;
+  height: -webkit-fill-available;
+}
+
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -19,10 +24,13 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
   background-color: #c49a6c;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 #root {
   height: 100%;
   width: 100%;
+  /* Ensure root also respects safe areas */
+  padding-top: max(0px, env(safe-area-inset-top));
 }
-
