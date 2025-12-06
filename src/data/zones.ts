@@ -24,6 +24,7 @@ export const zones: Zone[] = [
       { id: "1-4", name: "Extra Irish Pub (Viktor)", task: "Split the G" },
     ],
     code: "",
+    clue: "Laat een teamfoto maken bij het Brabo beeld"
     
   },
   {
@@ -35,6 +36,7 @@ export const zones: Zone[] = [
       { id: "2-3", name: "Cabron", task: "Pils PP" },
     ],
     code: "",
+    image: "rebus2.png"
   },
   {
     id: 3,
