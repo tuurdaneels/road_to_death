@@ -72,7 +72,7 @@ export const zones: Zone[] = [
       { id: "5-4", name: "Nachtwinkel", task: "Eristoff Mix (blikje)" },
     ],
     clue: "Tip 1) 🏨⭐️⭐️⭐️⭐️⭐️ Tip 2)🧔🏽‍♂️🏠👩🏼",
-    code: "GASTHUIS S'ELISABETH",
+    code: "GASTHUIS SˈELISABETH",
   },
   {
     id: 6,
@@ -84,7 +84,7 @@ export const zones: Zone[] = [
       { id: "6-4", name: "Vischmijn", task: "Pils PP" },
     ],
     code: "MAGRITTE",
-    clue: "In het Zuid staat een huis dat zich verbergt achter licht.\n\nHet is niet gebouwd om te wonen, maar om te bewaren wat niet sterft.\n\nHet telt meer ramen dan sommige straten huizen hebben,\nen toch kijkt niemand eruit.\n\nWie voor dit huis staat, zal merken dat het tijdelijk\nin de ban is van één naam.\n\nAan wie behoort dit huis nu – voorlopig – toe?\n\nSchrijf die naam op als jullie code.",
+    clue: "In het Zuid staat een gebouw dat zich verbergt achter licht.\n\nHet is niet gebouwd om te wonen, maar om te bewaren wat niet sterft.\n\nHet telt meer ramen dan sommige straten huizen hebben,\nen toch kijkt niemand eruit.\n\nWie voor dit huis staat, zal merken dat het tijdelijk\nin de ban is van één naam.\n\nAan wie behoort dit huis nu – voorlopig – toe?\n\nSchrijf die naam op als jullie code.",
   },
 ];
 
