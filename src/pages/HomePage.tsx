@@ -17,7 +17,7 @@ export default function HomePage() {
     const targetDate = new Date()
     targetDate.setMonth(11) // December (0-indexed, so 11 = December)
     targetDate.setDate(10)
-    targetDate.setHours(17, 0, 0, 0)
+    targetDate.setHours(18, 0, 0, 0)
 
     // If the date has passed this year, set it for next year
     if (targetDate < new Date()) {

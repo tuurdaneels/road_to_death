@@ -3,6 +3,7 @@ import { Zone } from '../data/zones'
 import bgImage from '../data/images/bg.png'
 import cardBgImage from '../data/images/card-bg.png'
 import ossemarktImage from '../data/images/ossemarkt.png'
+import bruderschaftImage from '../data/images/bruderschaft.png'
 import trofbrugImage from '../data/images/rebus2.svg'
 
 // Helper function to get image by name
@@ -11,6 +12,7 @@ function getZoneImage(imageName?: string): string | undefined {
   const imageMap: Record<string, string> = {
     'ossemarkt.png': ossemarktImage,
     'rebus2.svg': trofbrugImage,
+    'bruderschaft.png': bruderschaftImage,
   }
   return imageMap[imageName]
 }

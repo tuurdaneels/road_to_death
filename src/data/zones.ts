@@ -24,8 +24,8 @@ export const zones: Zone[] = [
       { id: "1-4", name: "Irish Pub", task: "Split the G" },
     ],
     code: "",
-    clue: "Laat een teamfoto maken bij het Brabo beeld"
-    
+    clue: "1) Laat een teamfoto maken bij het Brabo beeld\n 2) Vraag aan een random om een shotje mee te doen op de kerstmarkt in de Brüderschaft houding",
+    image: "bruderschaft.png"
   },
   {
     id: 2,
