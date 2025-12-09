@@ -72,7 +72,7 @@ export const zones: Zone[] = [
       { id: "5-4", name: "Nachtwinkel", task: "Eristoff Mix (blikje)" },
     ],
     clue: "Tip 1) 🏨⭐️⭐️⭐️⭐️⭐️ Tip 2)🧔🏽‍♂️🏠👩🏼",
-    code: "GASTHUIS SˈELISABETH",
+    code: "GASTHUIS S’ELISABETH",
   },
   {
     id: 6,
