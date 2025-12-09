@@ -13,11 +13,11 @@ export default function HomePage() {
   const [isExpired, setIsExpired] = useState(false)
 
   useEffect(() => {
-    // Target date: 10 december 17:00 (huidig jaar)
+    // Target date: 10 december 19:00 (huidig jaar)
     const targetDate = new Date()
     targetDate.setMonth(11) // December (0-indexed, so 11 = December)
     targetDate.setDate(10)
-    targetDate.setHours(18, 0, 0, 0)
+    targetDate.setHours(19, 0, 0, 0)
 
     // If the date has passed this year, set it for next year
     if (targetDate < new Date()) {
