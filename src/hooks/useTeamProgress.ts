@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { zones, getZoneOrderForTeam } from '../data/zones';
+import { getZoneOrderForTeam, getZonesForTeam } from '../data/zones';
 
 interface TeamProgress {
   teamId: string;
@@ -36,6 +36,9 @@ export function useTeamProgress(teamId: string) {
   const [progress, setProgress] = useState<TeamProgress | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // HIER: alle zones met overrides voor dit team
+  const teamZones = getZonesForTeam(teamId);
+
   useEffect(() => {
     // Always start from zone 1 on page refresh
     const initial = initializeProgress(teamId);
@@ -71,8 +74,9 @@ export function useTeamProgress(teamId: string) {
     });
   }, [teamId]);
 
+  // HIER: gebruik teamZones i.p.v. zones
   const currentZone = progress
-    ? zones.find(z => z.id === progress.zoneOrder[progress.currentZoneIndex])
+    ? teamZones.find(z => z.id === progress.zoneOrder[progress.currentZoneIndex])
     : null;
 
   const currentZoneCafes = currentZone?.cafes.map(c => c.id) || [];
@@ -96,4 +100,3 @@ export function useTeamProgress(teamId: string) {
     moveToNextZone,
   };
 }
-

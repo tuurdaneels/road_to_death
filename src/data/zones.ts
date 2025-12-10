@@ -24,7 +24,7 @@ export const zones: Zone[] = [
       { id: "1-4", name: "Irish Pub", task: "Split the G" },
     ],
     code: "",
-    clue: "1) Laat een teamfoto maken bij het Brabo beeld\n 2) Vraag aan een random om een shotje mee te doen op de kerstmarkt in de Brüderschaft houding",
+    clue: "1) Laat een teamfoto maken bij het Brabo beeld\n 2) Vraag aan een random om een shotje vanillejenever mee te drinken op de kerstmarkt in de Brüderschaft houding",
     image: "bruderschaft.png"
   },
   {
@@ -106,3 +106,28 @@ export function getZoneOrderForTeam(teamId: string): number[] {
   return order;
 }
 
+// Hier kan je later makkelijk per team taken aanpassen
+const TEAM_TASK_OVERRIDES: Record<
+  string,
+  Record<string, string> // café ID -> nieuwe task
+> = {
+  C: {
+    "1-3": "2 Sterke bieren",
+    "3-1": "2 Speciale bieren",
+    "4-3": "2 Fruitbieren",
+    "5-2": "2 Triples",
+    // Je kan hier alles zetten wat je wil voor team C
+  },
+};
+
+export function getZonesForTeam(teamId: string): Zone[] {
+  const overrides = TEAM_TASK_OVERRIDES[teamId] || {};
+
+  return zones.map(zone => ({
+    ...zone,
+    cafes: zone.cafes.map(cafe => ({
+      ...cafe,
+      task: overrides[cafe.id] ?? cafe.task,
+    })),
+  }));
+}
